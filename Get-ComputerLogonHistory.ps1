@@ -23,6 +23,6 @@ ForEach ($Event in $Events) {
 }            
   
     
-$events | select TimeCreated, ip
+$events | select TimeCreated,User,IP
 #$events
 }
