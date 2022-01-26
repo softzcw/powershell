@@ -16,7 +16,9 @@ ForEach ($Event in $Events) {
     # Convert the event to XML            
     $eventXML = [xml]$Event.ToXml()     
     # Append these as object properties            
-    Add-Member -InputObject $Event -MemberType NoteProperty -Force -Name  IP -Value $eventXML.Event.userdata.eventXML.address            
+    Add-Member -InputObject $Event -MemberType NoteProperty -Force -Name  IP -Value $eventXML.Event.userdata.eventXML.address   
+    
+    Add-Member -InputObject $Event -MemberType NoteProperty -Force -Name  User -Value $eventXML.event.userdata.eventxml.user 
               
 }            
   
