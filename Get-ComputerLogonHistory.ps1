@@ -1,5 +1,5 @@
 Function Get-ComputerLogonHistory{
-
+[CmdletBinding()] Param()
 $XMLFilter='<QueryList>
   <Query Id="0" Path="Microsoft-Windows-TerminalServices-LocalSessionManager/Operational">
     <Select Path="Microsoft-Windows-TerminalServices-LocalSessionManager/Operational">*[System[(EventID=21 or EventID=25)]]</Select>
