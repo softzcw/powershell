@@ -1,4 +1,9 @@
 Function Get-ComputerLogonHistory{
+<#
+ The function are displayed for each user: login name, the remote host, login time
+ auth:peter
+ qq:11204192
+#>
 [CmdletBinding()] Param()
 $XMLFilter='<QueryList>
   <Query Id="0" Path="Microsoft-Windows-TerminalServices-LocalSessionManager/Operational">
